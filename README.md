@@ -18,6 +18,7 @@ The highlights of this project is the following:
 1. It is tolerable that the product last crawled will be not valid. 
 It is not tolerable that the product  is no longer valid before the last crawling.
 
+1. Only the product showing valid information in the last crawling will be candiates for the recommendation.
 1. Each product only fits in one category. If two or more category contains this product, the product will only store the first category listed by Amazon.
 
 1. The total products to search from is <100K.
@@ -26,17 +27,23 @@ It is not tolerable that the product  is no longer valid before the last crawlin
 
 1. Recommendation system will track the clicks from the recommended products and adjust the weight of each category for the next recommendation.
 
+
 ## Design Topology
 
 ![](https://github.com/yefeiw/AmazonProductMonitor/blob/master/resources/Topology.jpg)
 
 ```
 1. Crawler independently crawls all Amazom product and push all messages to Rabbit MQ
+
+
 2. Recommendation service receives incoming messages, process the pricing information and save 
 the result both to key value store and to product DB.
+
+
 3. When the user requests for recommendation, email service searches in the userDB for data
 and in turn searches in the recommendation service for the candidatates. The email service will then
-send the email to the requested user.
+send the email to the requested user. Each email contains re-directed URL to track whether the product has been clicked.
+
 ```
 
 
