@@ -2,13 +2,11 @@ package com.yefeiw;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.EOFException;
 import java.io.File;
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -17,8 +15,9 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        final String INPUT_FILENAME = "rawQuery3.txt";
+        //final String INPUT_FILENAME = "rawQuery3.txt";
 
+        final String INPUT_FILENAME = "unitTest.txt";
         Logger logger = Logger.getLogger("crawler Test");
         QueryHandler queryHandler = new QueryHandler(INPUT_FILENAME);
         Crawler crawler = new Crawler();
@@ -57,13 +56,12 @@ public class Main {
                     logger.warning("File output error");
                     e.printStackTrace();
                 }
-                //TODO: write to rabbitMQ
                 for(Ad result : results) {
                     Gson gson = new Gson();
                     String jsonString = gson.toJson(result);
                     try {
                        JSONObject payload = new JSONObject(jsonString);
-                       handler.sendMessage(result.category,payload);
+                       handler.sendMessage("sfg-message-queue",payload);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

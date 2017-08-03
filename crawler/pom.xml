@@ -8,11 +8,6 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>crawler</name>
-    <parent>
-        <groupId>com.yefeiw</groupId>
-        <artifactId>amazon-product-monitor</artifactId>
-        <version>1.0.0.BUILD-SNAPSHOT</version>
-    </parent>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>

@@ -7,13 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="crawlerTest" />
-        <module name="product-monitor-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="amazon-product-monitor" target="1.8" />
       <module name="crawlerTest" target="1.5" />
-      <module name="product-monitor-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

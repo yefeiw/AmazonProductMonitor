@@ -1,8 +1,0 @@
-server:
-  port: 9000
-spring:
-  application:
-    name: product-monitor-service
-spring:
-  profiles:
-    active: usage_message
