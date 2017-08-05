@@ -157,11 +157,9 @@ public class Crawler {
                         }
 
                         //init ad fields
-                        ad.campaignId = Integer.parseInt(campaignId);
-                        ad.bidPrice = Double.parseDouble(bid);
                         ad.adId = Integer.parseInt(queryGroupId);
+                        ad.asin = asin;
                         ad.category = categoryStr;
-                        ad.query = input[0];//original query;
                         Elements titleEleList = prodsById.getElementsByAttribute("title");
                         ad.title = titleEleList.attr("title");
                         ad.keyWords = Arrays.asList(query.split(" "));

@@ -61,7 +61,7 @@ public class Main {
                     String jsonString = gson.toJson(result);
                     try {
                        JSONObject payload = new JSONObject(jsonString);
-                       handler.sendMessage("sfg-message-queue",payload);
+                       handler.sendMessage("queue1",payload);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
