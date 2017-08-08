@@ -62,7 +62,7 @@ public class QueryHandler {
     }
     //ref = https://examples.javacodegeeks.com/core-java/apache/lucene/lucene-indexing-example-2/
     public String tokenizeString(String str) {
-        Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_40);
+        Analyzer analyzer = new StandardAnalyzer();
         String ret = "";
         try {
             TokenStream stream  = analyzer.tokenStream(null, new StringReader(str));

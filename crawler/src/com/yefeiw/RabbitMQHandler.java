@@ -17,9 +17,8 @@ public class RabbitMQHandler {
 
     public RabbitMQHandler() {
         factory = new ConnectionFactory();
-        factory.setHost("localhost");
         try {
-            connection = factory.newConnection();
+            connection = factory.newConnection("localhost");
             channel = connection.createChannel();
         } catch (Exception e) {
             e.printStackTrace();
@@ -29,7 +28,7 @@ public class RabbitMQHandler {
     public void sendMessage(String queueName, JSONObject object) {
         try {
 //            channel.queueDeclare(queueName, false, false, false, null);
-            channel.basicPublish("", queueName, null, object.toString().getBytes());
+            channel.basicPublish(0, "",queueName,null, object.toString().getBytes());
             System.out.println(" [x] Sent '" + object.toString() + "'");
         } catch (Exception e) {
             e.printStackTrace();
