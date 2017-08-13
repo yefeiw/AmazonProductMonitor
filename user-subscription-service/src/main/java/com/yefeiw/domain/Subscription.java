@@ -1,4 +1,4 @@
-package com.ross.cs504.runninganalysisservice.domain;
+package com.yefeiw.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

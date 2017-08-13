@@ -10,6 +10,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
+
 /**
  * Created by yefeiw on 7/3/17.
  */
@@ -78,6 +80,10 @@ public class Ad implements Serializable{
         //update Max price
         for( double cand : this.price) {
             this.discount = Math.max(0,cand - price);
+        }
+        //For Demonstration Purposes
+        if (this.discount == 0) {
+            this.discount = new Random().nextDouble() * 10;
         }
         //update recent timestamp
         Date date = new Date();

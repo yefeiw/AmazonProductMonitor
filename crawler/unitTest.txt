@@ -1,6 +1,10 @@
-Prenatal DHA, 4.4, 8040,10
-prenatal DHA supplement, 12.5, 8041, 10
-Prenatal DHA nordic, 36.8, 8042, 10
-GNC prenatal DHA, 15.2, 8043, 10
-natural made prenatal DHA, 28.3, 8044, 10
+Electronics, 4.4, 8040,10
+
+Home Garden & Tools , 22.0, 8060,11
+
+Beauty & Health, 22.5,8100,15
+
+Clothing Shoes & Jewlery, 12.0,8160,21
+
+Handmade, 5.0, 8210,26
 

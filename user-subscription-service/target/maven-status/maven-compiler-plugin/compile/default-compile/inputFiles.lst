@@ -1,7 +1,9 @@
-/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/ross/cs504/runninganalysisservice/domain/UserInformation.java
-/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/ross/cs504/runninganalysisservice/rest/UserInfoRestController.java
-/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/ross/cs504/runninganalysisservice/service/impl/UserInfoServiceImpl.java
-/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/ross/cs504/runninganalysisservice/UserInfoServiceApplication.java
-/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/ross/cs504/runninganalysisservice/domain/UserInformationRepository.java
-/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/ross/cs504/runninganalysisservice/domain/Subscription.java
-/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/ross/cs504/runninganalysisservice/service/UserInfoService.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/service/UserInfoService.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/UserInfoServiceApplication.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/domain/Subscription.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/domain/UserInformationRepository.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/domain/AdRepository.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/service/impl/UserInfoServiceImpl.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/domain/UserInformation.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/rest/UserInfoRestController.java
+/Users/yefeiw/amazon_services/user-subscription-service/src/main/java/com/yefeiw/domain/Ad.java

@@ -185,8 +185,9 @@ public class Crawler {
 
                         //caution: no prices
                         if (price.isEmpty()) {
-                            logger.info("No price for product "+asin);
-                            ad.price = 0;
+                            logger.info("No price for product "+asin + ", generating random prices");
+
+                            ad.price = new Random().nextDouble() * 100;
 
                         } else {
                             if (price.contains("-")) {
@@ -226,7 +227,7 @@ public class Crawler {
                         }
                         logger.info("Page limit is "+pageLimit);
                         //For speed, change to 3 pages max
-                        pageLimit = Math.min(pageLimit,3);
+                        pageLimit = Math.min(pageLimit,10);
                     }catch (Exception e) {
                         logger.info("query "+query+" only has one page");
                         pageLimit = 1;

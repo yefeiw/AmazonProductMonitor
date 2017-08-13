@@ -3,6 +3,7 @@ package com.yefeiw.domain.rabbitconsumer;
 import com.yefeiw.domain.AdRepository;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,6 +13,9 @@ public class ConsumerBuilder {
     ConnectionFactory connectionFactory;
     @Autowired
     AdRepository repository;
+    @Autowired
+    private RedisTemplate redisTemplate;
+
 
     private int runtime = 0;
 
@@ -22,7 +26,7 @@ public class ConsumerBuilder {
         if (this.injectedReceiver != null) {
             receiver = this.injectedReceiver;
         } else {
-            receiver = new ReliableReceiver(queueName,repository);
+            receiver = new ReliableReceiver(queueName,repository,redisTemplate);
         }
         return new Consumer( queueName, connectionFactory, receiver);
     }

@@ -1,6 +1,6 @@
-package com.ross.cs504.runninganalysisservice.service;
+package com.yefeiw.service;
 
-import com.ross.cs504.runninganalysisservice.domain.UserInformation;
+import com.yefeiw.domain.UserInformation;
 
 import java.util.List;
 

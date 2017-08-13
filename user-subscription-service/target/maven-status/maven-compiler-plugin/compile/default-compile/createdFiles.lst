@@ -1,7 +1,9 @@
-com/ross/cs504/runninganalysisservice/service/impl/UserInfoServiceImpl.class
-com/ross/cs504/runninganalysisservice/domain/UserInformationRepository.class
-com/ross/cs504/runninganalysisservice/domain/Subscription.class
-com/ross/cs504/runninganalysisservice/rest/UserInfoRestController.class
-com/ross/cs504/runninganalysisservice/service/UserInfoService.class
-com/ross/cs504/runninganalysisservice/domain/UserInformation.class
-com/ross/cs504/runninganalysisservice/UserInfoServiceApplication.class
+com/yefeiw/domain/UserInformation.class
+com/yefeiw/domain/Subscription.class
+com/yefeiw/service/UserInfoService.class
+com/yefeiw/UserInfoServiceApplication.class
+com/yefeiw/domain/AdRepository.class
+com/yefeiw/domain/UserInformationRepository.class
+com/yefeiw/rest/UserInfoRestController.class
+com/yefeiw/domain/Ad.class
+com/yefeiw/service/impl/UserInfoServiceImpl.class

@@ -1,4 +1,4 @@
-package com.ross.cs504.runninganalysisservice;
+package com.yefeiw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

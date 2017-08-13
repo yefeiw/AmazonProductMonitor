@@ -1,4 +1,4 @@
-package com.ross.cs504.runninganalysisservice.domain;
+package com.yefeiw.domain;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;

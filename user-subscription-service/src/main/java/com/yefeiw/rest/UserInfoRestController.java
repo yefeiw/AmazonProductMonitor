@@ -1,8 +1,8 @@
-package com.ross.cs504.runninganalysisservice.rest;
+package com.yefeiw.rest;
 
-import com.ross.cs504.runninganalysisservice.domain.Subscription;
-import com.ross.cs504.runninganalysisservice.domain.UserInformation;
-import com.ross.cs504.runninganalysisservice.service.UserInfoService;
+import com.yefeiw.domain.Subscription;
+import com.yefeiw.domain.UserInformation;
+import com.yefeiw.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
