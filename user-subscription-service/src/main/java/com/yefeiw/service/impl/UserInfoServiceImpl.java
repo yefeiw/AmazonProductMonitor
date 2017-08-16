@@ -27,6 +27,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Autowired
     private AdRepository adRepository;
 
+
     private Logger logger = LoggerFactory.getLogger(UserInfoServiceImpl.class);
     @Override
     public List<UserInformation> saveUserInfo(List<UserInformation> userInfo) {
@@ -41,13 +42,19 @@ public class UserInfoServiceImpl implements UserInfoService {
             logger.info("Getting subscription for user " + information.getUsername());
             List<Ad> emailList = new ArrayList<>();
             for (Subscription cand : subscriptions) {
-                List<Ad> topKAds = adRepository.findAllByCategoryOrderByDiscount(cand.getCategory());
+                List<Ad> topKAds = adRepository.findTop100ByCategoryOrderByDiscountDesc(cand.getCategory());
                 logger.info("Found " + topKAds.size() + " ads for category " + cand.getCategory() + " for user " + information.getUsername());
-                emailList.addAll(topKAds);
+                for(int i = 0; i < cand.getNumbers() && i < topKAds.size();i++) {
+                    emailList.add(topKAds.get(i));
+                }
             }
             //Send email
             try {
-                generateAndSendEmail(information, emailList);
+                if(emailList.size() > 0) {
+                    generateAndSendEmail(information, emailList);
+                } else {
+                    logger.info("No discount updates for user "+information.getUsername());
+                }
             } catch (Exception e) {
                 logger.error("Error sending email");
                 e.printStackTrace();
@@ -81,7 +88,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         String emailBody = "Hi Dear " +recipient.getUsername()+
                 "<br><br>Here are the latest updates of your favorite Discounts</br>";
         for(Ad ad : body) {
-            emailBody += "<br>"+ad.title+"</br><br>"+ad.discount+"</br><br><img src=\""+ad.thumbnail+"\"/></br>";
+            emailBody += "<a href =\""+ad.detail_url+"\">"+ad.title+"</a><br> You saved "+ad.discount+"</br><br><img src=\""+ad.thumbnail+"\"/></br>";
         }
         emailBody += "<br> Regards, <br>Yefei Wang";
         generateMailMessage.setContent(emailBody, "text/html");

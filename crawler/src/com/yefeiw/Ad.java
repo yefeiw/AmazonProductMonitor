@@ -18,4 +18,5 @@ public class Ad implements Serializable{
     public String brand; // required
     public String detail_url; // required
     public String category;
+    public long date;
 }

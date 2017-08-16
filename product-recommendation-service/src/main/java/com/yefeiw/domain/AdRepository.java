@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 /**
  * Created by vagrant on 8/5/17.
  */
-public interface AdRepository extends JpaRepository<Ad,Long> {
+public interface AdRepository extends JpaRepository<Ad,String> {
     Ad findAdByAsin(String asin);
     @Transactional
     @Modifying

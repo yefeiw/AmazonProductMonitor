@@ -13,6 +13,7 @@ import java.util.List;
 public interface AdRepository extends JpaRepository<Ad,Long> {
     Ad findAdByAsin(@Param("asin") String asin);
     List<Ad> findAllByCategoryOrderByDiscount(@Param("category") String category);
+    List<Ad> findTop100ByCategoryOrderByDiscountDesc(@Param("category") String category);
     @Transactional
     @Modifying
     Ad save(Ad ad);

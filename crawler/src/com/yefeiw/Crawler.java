@@ -163,6 +163,7 @@ public class Crawler {
                         Elements titleEleList = prodsById.getElementsByAttribute("title");
                         ad.title = titleEleList.attr("title");
                         ad.keyWords = Arrays.asList(query.split(" "));
+                        ad.date = new Date().getTime();
                         try {
                             Element description = doc.select("#result_" + Integer.toString(i) + "  > div > div > div > div.a-fixed-left-grid-col.a-col-right > div:nth-child(2) > div.a-column.a-span5.a-span-last > div:nth-child(1) > span.a-size-small.a-color-secondary.a-text-bold").first();
                             if (description != null) {
@@ -184,10 +185,9 @@ public class Crawler {
                         price = price.replaceAll(" ","");
 
                         //caution: no prices
-                        if (price.isEmpty()) {
+                        if (price.length() == 0) {
                             logger.info("No price for product "+asin + ", generating random prices");
 
-                            ad.price = new Random().nextDouble() * 100;
 
                         } else {
                             if (price.contains("-")) {
@@ -198,6 +198,7 @@ public class Crawler {
                                 ad.price = Double.parseDouble(price);
                             }
                         }
+                        ad.price = new Random().nextInt(10000) / 100.0;
                         Element thumbnail = doc.select("#result_" + Integer.toString(i) + " > div > div > div > div.a-fixed-left-grid-col.a-col-left > div > div > a > img").first();
                         if (thumbnail == null) {
                             logger.warning("Product " + asin + " does not have thumbnail");
@@ -227,7 +228,7 @@ public class Crawler {
                         }
                         logger.info("Page limit is "+pageLimit);
                         //For speed, change to 3 pages max
-                        pageLimit = Math.min(pageLimit,10);
+                        pageLimit = Math.min(pageLimit,11);
                     }catch (Exception e) {
                         logger.info("query "+query+" only has one page");
                         pageLimit = 1;

@@ -1,0 +1,13 @@
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/rabbitconsumer/ConsumerBuilder.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/UserInformation.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/rest/UserInfoRestController.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/rabbitconsumer/ReliableReceiver.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/rabbitconsumer/Consumer.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/Ad.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/rabbitconsumer/Receiver.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/service/impl/UserInfoServiceImpl.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/Subscription.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/AdRepository.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/service/UserInfoService.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/domain/UserInformationRepository.java
+/Users/yefeiw/amazon_services/user-queue-subscription-service/src/main/java/com/yefeiw/UserInfoServiceApplication.java
